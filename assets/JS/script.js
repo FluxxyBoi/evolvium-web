@@ -267,7 +267,7 @@ function createParticles() {
     particle.style.position = 'absolute';
     particle.style.width = Math.random() * 5 + 2 + 'px';
     particle.style.height = particle.style.width;
-    particle.style.backgroundColor = 'rgba(255, 69, 0, ' + (Math.random() * 0.2 + 0.1) + ')';
+    particle.style.backgroundColor = 'rgba(30, 144, 255, ' + (Math.random() * 0.2 + 0.1) + ')';
     particle.style.borderRadius = '50%';
     particle.style.top = Math.random() * 100 + 'vh';
     particle.style.left = Math.random() * 100 + 'vw';
@@ -298,7 +298,7 @@ function createParticle() {
   particle.style.position = 'absolute';
   particle.style.width = Math.random() * 5 + 2 + 'px';
   particle.style.height = particle.style.width;
-  particle.style.backgroundColor = 'rgba(255, 69, 0, ' + (Math.random() * 0.2 + 0.1) + ')';
+  particle.style.backgroundColor = 'rgba(30, 144, 255, ' + (Math.random() * 0.2 + 0.1) + ')';
   particle.style.borderRadius = '50%';
   particle.style.top = Math.random() * 100 + 'vh';
   particle.style.left = Math.random() * 100 + 'vw';
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize cursor effect with reduced particles
   new cursoreffects.fairyDustCursor({
-    colors: ["#ff7e00", "#ff4500", "#ffc87c", "#ffaa33"],
+    colors: ["#1e90ff", "#4682b4", "#6495ed", "#87ceeb"],
     size: 3, // Reduced size
     alpha: 0.6, // Reduced opacity
     quantity: 4, // Fewer particles (default is 15)
