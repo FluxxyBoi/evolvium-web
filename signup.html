@@ -249,66 +249,6 @@
         transform: scale(0);
       }
     }
-    
-    /* Detail Toggle Button */
-    .detail-toggle-btn {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(8, 15, 40, 0.8);
-      color: var(--white);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 14px;
-      border: 1px solid var(--blue-1);
-      cursor: pointer;
-      z-index: 1000;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-    
-    .detail-toggle-btn:hover {
-      background: rgba(30, 144, 255, 0.3);
-      transform: translateY(-2px);
-    }
-    
-    /* Low Detail Mode Classes */
-    .low-detail-mode {
-      background: #0033a0 !important;
-      animation: none !important;
-    }
-    
-    .low-detail-mode .signup-card {
-      backdrop-filter: none !important;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
-      animation: none !important;
-      transform: none !important;
-      opacity: 1 !important;
-      transition: none !important;
-    }
-    
-    .low-detail-mode .signup-title {
-      animation: none !important;
-      text-shadow: none !important;
-    }
-    
-    .low-detail-mode .signup-title:after {
-      animation: none !important;
-      width: 70px !important;
-    }
-    
-    .low-detail-mode .google-form-container {
-      animation: none !important;
-      transform: none !important;
-      opacity: 1 !important;
-    }
-    
-    .low-detail-mode .back-to-login {
-      animation: none !important;
-      transform: none !important;
-      opacity: 1 !important;
-    }
   </style>
 </head>
 
@@ -318,9 +258,6 @@
   <div class="floating-shape shape-2"></div>
   <div class="floating-shape shape-3"></div>
   <div class="floating-shape shape-4"></div>
-  
-  <!-- Detail Mode Toggle Button -->
-  <button id="detail-toggle" class="detail-toggle-btn">Low Detail Mode</button>
   
   <!-- Main container -->
   <div class="signup-container">
@@ -361,40 +298,6 @@
         sparkle.remove();
       }, 2000);
     }
-    
-    // Low Detail Mode Toggle
-    const detailToggleBtn = document.getElementById('detail-toggle');
-    const body = document.body;
-    const floatingShapes = document.querySelectorAll('.floating-shape');
-    
-    detailToggleBtn.addEventListener('click', function() {
-      body.classList.toggle('low-detail-mode');
-      
-      // Toggle visibility of floating shapes
-      floatingShapes.forEach(shape => {
-        shape.style.display = body.classList.contains('low-detail-mode') ? 'none' : 'block';
-      });
-      
-      // Disable/Enable sparkle effect
-      if (body.classList.contains('low-detail-mode')) {
-        document.removeEventListener('mousemove', handleMouseMove);
-        detailToggleBtn.textContent = 'Normal Mode';
-      } else {
-        document.addEventListener('mousemove', handleMouseMove);
-        detailToggleBtn.textContent = 'Low Detail Mode';
-      }
-    });
-    
-    // Store the mousemove handler in a variable so we can remove it later
-    function handleMouseMove(e) {
-      // Only create a sparkle 10% of the time to avoid too many elements
-      if (Math.random() > 0.9) {
-        createSparkle(e.pageX, e.pageY);
-      }
-    }
-    
-    // Replace the anonymous function with our named handler
-    document.addEventListener('mousemove', handleMouseMove);
   </script>
 
   <!-- AOS Animation Library -->

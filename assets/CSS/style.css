@@ -27,13 +27,13 @@
     --davys-gray: hsl(0, 0%, 33%);
     --field-drab: hsl(47, 98%, 22%);
     --red-crayola: hsl(356, 73%, 58%);
-    --golden-puppy: #ff4500; /* Updated color */
+    --golden-puppy: #ff0000; /* Updated to red */
     --quick-silver: hsl(0, 0%, 63%);
     --sonic-silver: hsl(0, 0%, 44%);
     --eerie-black-1: hsl(0, 0%, 15%);
     --eerie-black-2: hsl(0, 0%, 7%);
     --rich-black-fogra-39: hsl(0, 0%, 2%);
-    --gradient-bg: linear-gradient(45deg, #ff4500, #ff7e00); /* New gradient background */
+    --gradient-bg: linear-gradient(45deg, #ff0000, #ff0000); /* Updated gradient to red */
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* New shadow variable */
   
     /**
@@ -123,7 +123,7 @@
   
   ::-webkit-scrollbar-thumb { background: var(--golden-puppy); }
   
-  ::-webkit-scrollbar-thumb:hover { --golden-puppy: hsl(47, 100%, 40%); }
+  ::-webkit-scrollbar-thumb:hover { --golden-puppy: hsl(14, 100%, 40%); }
   
   ::-webkit-scrollbar-button { height: 5px; }
   
@@ -159,13 +159,13 @@
   }
   
   .btn {
-    color: #ff4500;
+    color: #ff0000; /* Updated to red */
     font-size: 16px;
     font-weight: bolder;
     text-transform: uppercase;
     min-width: 130px;
     padding: 0.6em 1em;
-    border: 4px solid #ff4500;
+    border: 4px solid #ff0000; /* Updated to red */
     border-radius: 8px; /* Increased border radius */
     transition: all 0.3s ease;
     background-color: transparent;
@@ -181,7 +181,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #ff4500;
+    background-color: #ff0000; /* Updated to red */
     transition: all 0.3s ease;
     z-index: -1;
   }
@@ -214,7 +214,7 @@
     box-shadow: var(--box-shadow);
   }
   
-  .btn-primary:is(:hover, :focus) { --golden-puppy: hsl(24, 100%, 45%); } /* Adjusted hover color */
+  .btn-primary:is(:hover, :focus) { --golden-puppy: hsl(7, 100%, 45%); } /* Adjusted hover color */
   
   .btn-secondary:is(:hover, :focus) { background: hsla(47, 100%, 45%, 0.1); }
   
@@ -283,7 +283,7 @@
     left: 10px;
     width: 0;
     height: 2px;
-    background-color: #ff4500;
+    background-color: #ff0000; /* Updated to red */
     transition: width 0.3s ease;
   }
   
@@ -292,7 +292,7 @@
   }
   
   .navbar-link:hover {
-    color: #ff4500;
+    color: #ff0000;
     transform: translateX(5px);
   }
   
@@ -455,7 +455,7 @@
   .add-to-whishlist:is(:hover, :focus) { --white: hsl(0, 0%, 80%); }
   
   .place-bid-btn {
-    background: var(--golden-puppy);
+    background: #ff0000; /* Updated to red */
     color: var(--black);
     position: absolute;
     top: 50%;
@@ -477,7 +477,7 @@
   
   .product-title { margin-bottom: 15px; }
   
-  .product-card:is(:hover, :focus) .product-title { color: var(--red-crayola); }
+  .product-card:is(:hover, :focus) .product-title { color: #ff0000; /* Updated to red */ }
   
   .product-meta {
     display: flex;
@@ -608,7 +608,7 @@
   
   .about-card:hover {
     transform: translateY(-10px);
-    border-color: #ff4500;
+    border-color: #ff0000;
     box-shadow: 0 15px 30px rgba(255, 69, 0, 0.2);
   }
   
@@ -698,6 +698,7 @@
   
   .top-seller-title span {
     color: var(--golden-puppy); /* Setting the color to golden */
+    display: inline-block;
   }
   
   .top-seller-title::after {
@@ -746,7 +747,7 @@
   
   .top-seller-card:hover img {
     transform: scale(1.1);
-    border-color: #ff4500;
+    border-color: #ff1e00;
   }
   
   .top-seller-card .card-content .card-title {
@@ -808,7 +809,7 @@
   .top-seller-card:hover .avatar-badge ion-icon {
     color: var(--golden-puppy);
     filter: brightness(1.3);
-    text-shadow: 0 0 10px rgba(255, 126, 0, 0.7);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
   }
   
   /* Team card buttons container */
@@ -1027,7 +1028,7 @@
   }
   
   .footer-item:hover::before {
-    background: var(--golden-puppy);
+    background: #ff0000; /* Updated to red */
     border-color: var(--field-drab);
   }
   
@@ -1039,7 +1040,7 @@
     transition: var(--transition);
   }
   
-  .footer-item:hover .footer-link { color: var(--golden-puppy); }
+  .footer-item:hover .footer-link { color: #ff0000; /* Updated to red */ }
   
   .footer-item:hover::before,
   .footer-item:hover .footer-link { transform: translateX(10px); }
@@ -1672,31 +1673,3 @@
     transition: width 0.1s ease-out;
   }
   
-  /* Botón flotante de regreso arriba */
-  .back-to-top {
-    position: fixed;
-    bottom: -60px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--gradient-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    box-shadow: var(--box-shadow);
-    transition: all 0.5s ease;
-    z-index: 100;
-    opacity: 0;
-  }
-  
-  .back-to-top.visible {
-    bottom: 30px;
-    opacity: 1;
-  }
-  
-  .back-to-top:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  }

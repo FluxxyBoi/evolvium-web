@@ -1,0 +1,2 @@
+change file redirects to signup pages from index.html to domain index file path
+change path of competition sign up links in our competitions area of index file
