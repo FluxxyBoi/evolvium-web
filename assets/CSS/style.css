@@ -26,14 +26,14 @@
     --light-gray: hsl(0, 0%, 80%);
     --davys-gray: hsl(0, 0%, 33%);
     --field-drab: hsl(47, 98%, 22%);
-    --red-crayola: hsl(356, 73%, 58%);
-    --golden-puppy: #ff0000; /* Updated to red */
+    --red-crayola: hsl(0, 73%, 58%);
+    --golden-puppy: hsl(0, 100%, 50%);
     --quick-silver: hsl(0, 0%, 63%);
     --sonic-silver: hsl(0, 0%, 44%);
     --eerie-black-1: hsl(0, 0%, 15%);
     --eerie-black-2: hsl(0, 0%, 7%);
     --rich-black-fogra-39: hsl(0, 0%, 2%);
-    --gradient-bg: linear-gradient(45deg, #ff0000, #ff0000); /* Updated gradient to red */
+    --gradient-bg: linear-gradient(45deg, #ff0000, #ff0000); 
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* New shadow variable */
   
     /**
@@ -609,7 +609,7 @@
   .about-card:hover {
     transform: translateY(-10px);
     border-color: #ff0000;
-    box-shadow: 0 15px 30px rgba(255, 69, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.2);
   }
   
   .about-card .card-number {
@@ -622,7 +622,7 @@
   
   .about-card:hover .card-number {
     transform: scale(1.2);
-    color: #ff7e00;
+    color: #ff0000;
   }
   
   .about-card .card-icon {
@@ -651,7 +651,7 @@
   }
   
   .about-card:hover .about-card-title {
-    color: #ff4500;
+    color: #ff0000;
   }
   
   .about-card .about-card-text {
@@ -761,7 +761,7 @@
   
   .top-seller-card:hover .card-number {
     color: var(--golden-puppy);
-    text-shadow: 0 0 10px rgba(255, 126, 0, 0.7); /* Golden glow effect */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7); /* Golden glow effect */
     filter: brightness(1.2); /* Increase brightness */
     transform: scale(1.1); /* Slight size increase */
   }
@@ -773,7 +773,7 @@
   
   .top-seller-card:hover data {
     color: var(--golden-puppy);
-    text-shadow: 0 0 10px rgba(255, 126, 0, 0.7); /* Golden glow effect */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7); /* Golden glow effect */
     filter: brightness(1.2); /* Increase brightness */
     transform: scale(1.05); /* Slight size increase */
   }
@@ -795,8 +795,8 @@
   
   .top-seller-card:hover .avatar-badge {
     border-color: var(--golden-puppy);
-    background-color: rgba(255, 69, 0, 0.1);
-    box-shadow: 0 0 15px rgba(255, 126, 0, 0.8);
+    background-color: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
     transform: scale(1.2);
   }
   
@@ -878,7 +878,7 @@
   
   .team-card-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
   }
   
   .team-card-btn.about-btn {
@@ -1132,7 +1132,7 @@
   
   @keyframes colorPulse {
     0% { background-color: transparent; }
-    50% { background-color: rgba(255, 69, 0, 0.2); } /* Orange with transparency */
+    50% { background-color: rgba(255, 0, 0, 0.2); } /* Orange with transparency */
     100% { background-color: transparent; }
   }
   
@@ -1402,10 +1402,6 @@
     .hero-title,
     .hero-text { margin-bottom: 35px; }
   
-    .hero-text { --fs-7: 18px; }
-  
-    .btn-group { gap: 20px; }
-  
   
   
     /**
@@ -1591,7 +1587,7 @@
     .footer-list { min-width: 180px; }
   
   }
-  
+
   /* From Uiverse.io by adamgiebl */
   .cssbuttons-io-button {
     background: var(--gradient-bg);
@@ -1632,7 +1628,7 @@
   
   .cssbuttons-io-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(255, 69, 0, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
   }
   
   .cssbuttons-io-button .icon {
@@ -1667,9 +1663,8 @@
     top: 0;
     left: 0;
     height: 5px;
-    background: linear-gradient(to right, var(--golden-puppy), #ff7e00);
+    background: linear-gradient(to right, var(--golden-puppy), #ff0000);
     z-index: 9999;
     width: 0%;
     transition: width 0.1s ease-out;
   }
-  
