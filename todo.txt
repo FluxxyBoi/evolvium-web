@@ -9,3 +9,6 @@ change user.webp in About section
 edit event boxes description and link paths in index.html | inquire about hosting paths and host panel type (if cpanel)
 change google form in register.html
 update school logo on all pages with title and favicon aswell
+change event names and descriptions in events.html
+add event texts in event1 as template, and change all register button links
+inquire different register and submission link, and how register must be done before submission
