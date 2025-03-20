@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    .countdown-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .countdown-title {
+      font-size: var(--fs-1);
+      margin-bottom: 20px;
+    }
+
+    .countdown-timer {
+      display: flex;
+      gap: 20px;
+      font-size: var(--fs-3);
+      font-weight: var(--fw-700);
+    }
+
+    .countdown-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .countdown-number {
+      font-size: var(--fs-2);
+      color: var(--golden-puppy);
+    }
+
+    .countdown-label {
+      font-size: var(--fs-6);
+      color: var(--quick-silver);
+    }
+  </style>
+</head>
+
+<body id="top">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="./assets/images/rudr.webp" alt="Rudr Bot" class="animate">
+      </a>
+      <div class="header-right">
+        <div class="header-nav-wrapper">
+          <button class="navbar-toggle-btn" data-navbar-toggle-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+          <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+              <li><a href="#" class="navbar-link">Home</a></li>
+              <li><a href="#about" class="navbar-link">About</a></li>
+              <li><a href="#dev" class="navbar-link">Team</a></li>
+              <li><a href="/legal" class="navbar-link">Legal</a></li>
+              <li><a href="/discord" class="navbar-link">Community</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-actions">
+          <form action="https://rudrbot.xyz/invite" method="POST">
+            <button class="btn btn-primary">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Countdown Section -->
+  <div class="countdown-container">
+    <h1 class="countdown-title">Event Countdown</h1>
+    <div class="countdown-timer" id="countdown">
+      <div class="countdown-unit">
+        <span class="countdown-number" id="days">0</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="hours">0</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="minutes">0</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="seconds">0</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./assets/images/rudr.webp" alt="NAFT logo">
+          </a>
+          <p class="footer-brand-text">Short text</p>
+        </div>
+        <div class="footer-link-box">
+          <ul class="footer-list">
+            <li><h3 class="animate h3 footer-item-title">Other competitions</h3></li>
+            <li class="footer-item"><a href="/discord" class="footer-link">To be edited</a></li>
+            <li class="footer-item"><a href="/discord" class="footer-link">To be edited</a></li>
+          </ul>
+          <ul class="footer-list">
+            <li><h3 class="animate h3 footer-item-title">Quick Links</h3></li>
+            <li class="footer-item"><a href="/legal" class="footer-link">School</a></li>
+            <li class="footer-item"><a href="/invite" class="footer-link">TG-MUN</a></li>
+            <li class="footer-item"><a href="https://discord.com/discovery/applications/1245288654662930523" class="footer-link">More Info</a></li>
+          </ul>
+          <ul class="footer-list">
+            <li><h3 class="animate h3 footer-item-title">Need Help?</h3></li>
+            <li class="footer-item"><a href="/discord" class="footer-link">Discord</a></li>
+            <li class="footer-item"><a href="" class="footer-link">Email us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2025 <a href="https://rudrbot.xyz/legal">Rudr</a> | All Rights Reserved
+        </p>
+        <div class="footer-bottom-links">
+          <a href="/legal/privacy">Privacy Policy</a>
+          <a href="/legal/tos">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const countdownElement = document.getElementById('countdown');
+  
+    // Set your universal event time (UTC format recommended)
+    const endTime = new Date("2025-04-01T12:00:00Z"); // Change this to your actual event time
+  
+    function updateCountdown() {
+      const now = new Date();
+      const timeLeft = endTime - now;
+  
+      if (timeLeft <= 0) {
+        countdownElement.innerHTML = '<h2>Countdown Ended!</h2>';
+        clearInterval(interval);
+        return;
+      }
+  
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours;
+      document.getElementById('minutes').textContent = minutes;
+      document.getElementById('seconds').textContent = seconds;
+    }
+  
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+  
+</body>
+
+</html>
