@@ -6,4 +6,5 @@ update links in header and footer of all files
 change name & time of countdown in countdown.html and index.html
 change sun image in hero section in index.html and center evolvium text
 change user.webp in About section
-edit event boxes description in index.html
+edit event boxes description and link paths in index.html | inquire about hosting paths and host panel type (if cpanel)
+change google form in register.html
