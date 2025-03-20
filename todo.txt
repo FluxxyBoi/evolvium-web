@@ -3,3 +3,7 @@ change path of competition sign up links in our competitions area of index file
 change rudrbot links to evolvium index
 setup countdown exact date and time in countdown.html
 update links in header and footer of all files
+change name & time of countdown in countdown.html and index.html
+change sun image in hero section in index.html and center evolvium text
+change user.webp in About section
+edit event boxes description in index.html

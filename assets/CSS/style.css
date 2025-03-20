@@ -309,12 +309,21 @@
    * #HERO
   \*-----------------------------------*/
   
-  .hero { padding: 60px 0; }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
   
   .hero-content {
+    display: flex;  /* Use flexbox instead of grid */
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
     text-align: center;
-    margin-bottom: 50px;
-    animation: fadeIn 1s ease-in-out;
+    width: 100%;  /* Ensures it spans the full width */
   }
   
   @keyframes fadeIn {
@@ -322,11 +331,11 @@
     to { opacity: 1; transform: translateY(0); }
   }
   
-  .hero-title { 
-    margin-bottom: 15px; 
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-  }
+  .hero-title {
+    text-align: center; /* Center the text */
+    display: block; /* Ensure no flex behavior affects the title */
+    width: 100%;
+}
   
   .hero-title > span {
     display: inline-block;
@@ -364,17 +373,6 @@
     gap: 10px;
   }
   
-  .hero-banner {
-    width: 100%;
-    max-width: 600px; /* Increase the max width */
-    margin: 0 auto;
-  }
-  
-  .hero-banner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
   
   
   /*-----------------------------------*\
