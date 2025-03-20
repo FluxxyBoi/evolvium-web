@@ -8,3 +8,4 @@ change sun image in hero section in index.html and center evolvium text
 change user.webp in About section
 edit event boxes description and link paths in index.html | inquire about hosting paths and host panel type (if cpanel)
 change google form in register.html
+update school logo on all pages with title and favicon aswell
