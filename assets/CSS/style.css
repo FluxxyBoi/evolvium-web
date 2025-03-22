@@ -304,6 +304,11 @@
   
   .header-actions { display: none; }
   
+  .logo img {
+    max-height: 100px; /* Ensure the image height fits within the navbar */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+  }
   
   /*-----------------------------------*\
    * #HERO
@@ -341,7 +346,7 @@
     display: inline-block;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--golden-puppy);
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: var(--white);
     position: relative;
   }
   
@@ -360,10 +365,13 @@
     color: var(--white);
     font-size: var(--fs-6);
     margin-bottom: 30px;
-    max-width: 600px;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
+    white-space: nowrap; /* Force text to be in one line */
+    overflow: visible; /* Hide overflow if text is too long */
+    text-overflow: clip; /* Add ellipsis for overflowed text */
   }
   
   .btn-group {
@@ -979,7 +987,7 @@
     height: 45px;
     display: grid;
     place-items: center;
-    background: var(--eerie-black-1);
+    background: var (--eerie-black-1);
     border-radius: 50%;
     transition: all 0.3s ease;
   }
@@ -1026,7 +1034,7 @@
   
   .footer-item:hover::before {
     background: #ff0000; /* Updated to red */
-    border-color: var(--field-drab);
+    border-color: var (--field-drab);
   }
   
   .footer-link {
